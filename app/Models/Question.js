@@ -40,9 +40,8 @@ export default class Question {
 
     get Reveal() {
         return /*html*/`
-            <div class="col-4 card p-4 text-center">
+            <div class="col-4 card p-4 text-center" onclick="app.questionController.next()">
                 <h4>${this.answer}</h4>
-                <h6>Score: ${ProxyState.score}</h6>
         </div >
             `
     }

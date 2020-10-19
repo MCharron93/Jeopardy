@@ -24,32 +24,21 @@ class QuestionService {
   }
 
   next() {
-    api.get().then(res => {
-      let newQuestion = 
-    })
+    this.getQuestions()
+  }
 
-
-
-    // if (ProxyState.next) {
-    //   api.get(ProxyState.next).then(res => {
-    //     ProxyState.next = 
-    //   })
+  scoreCount() {
+    // let score = ProxyState.score
+    // let correct = ProxyState.question.answer
+    // let answer = document.getElementById("answer")
+    // if (answer == correct) {
+    //   let value = ProxyState.question.value
+    //   score += value
+    //   console.log(score);
   }
 }
-
-scoreCount() {
-  let score = ProxyState.score
-  let correct = ProxyState.question.answer
-  let answer = document.getElementById("answer")
-  if (answer == correct) {
-    let value = ProxyState.question.value
-    score += value
-    console.log(score);
-  }
 }
 
-
-}
 
 export const questionService = new QuestionService();
 
