@@ -1,9 +1,11 @@
 import { ProxyState } from "../AppState.js";
 import Question from "../Models/Question.js";
+import { api } from "../Services/AxiosService.js"
 
 class QuestionService {
   constructor() {
-    console.log("Service setup");
+    console.log(ProxyState.questions);
+
   }
 }
 
