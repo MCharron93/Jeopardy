@@ -3,19 +3,23 @@ import { questionService } from "../Services/QuestionService.js";
 
 
 //Private
-function _draw() {
-  // let question = ProxyState.questions
-  // let template = ''
-  // question.forEach(q => template += q.Template)
-  // document.getElementById("question").innerHTML = /*html*/`
-  // `
+function _drawCard() {
+  let card = ProxyState.question
+  let template = ""
+  document.getElementById("question").innerHTML = card.Cover
+}
+
+function flipOver() {
+  let question = ProxyState.question
+  let template = ""
+  document.getElementById("question").innerHTML = question.Template
 }
 
 //Public
 export default class QuestionController {
   constructor() {
-    ProxyState.on("questions", _draw);
-    _draw()
+    ProxyState.on("question", _drawCard);
+    _drawCard()
     // console.log();
   }
 
