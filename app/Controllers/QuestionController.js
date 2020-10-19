@@ -9,18 +9,35 @@ function _drawCard() {
   document.getElementById("question").innerHTML = card.Cover
 }
 
-function flipOver() {
-  let question = ProxyState.question
-  let template = ""
-  document.getElementById("question").innerHTML = question.Template
-}
+// function _flipOver() {
+//   let question = ProxyState.question
+//   let template = ""
+//   document.getElementById("question").innerHTML = question.Template
+// }
 
 //Public
 export default class QuestionController {
   constructor() {
     ProxyState.on("question", _drawCard);
     _drawCard()
-    // console.log();
+  }
+
+  flipOver() {
+    let question = ProxyState.question
+    let template = ""
+    document.getElementById("question").innerHTML = question.Template
+  }
+
+  flipAnswer() {
+    let question = ProxyState.question
+    let template = ""
+    document.getElementById("question").innerHTML = question.Answer
+  }
+
+  reveal() {
+    let question = ProxyState.question
+    let template = ""
+    document.getElementById("question").innerHTML = question.Reveal
   }
 
 }

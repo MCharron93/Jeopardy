@@ -11,14 +11,15 @@ class QuestionService {
   getQuestions() {
     api.get().then(res => {
       // console.log("did this work?", res.data[0].question)
-      // console.log("answer: ", res.data[0].answer)
+      // console.log(res.data[0])
+      // console.log(ProxyState.question)
 
       let questionIndex = res.data[0]
-      // console.log(res.data[0])
       ProxyState.question = new Question(questionIndex)
-      console.log(ProxyState.question)
     })
   }
+
+
 
 }
 

@@ -6,6 +6,9 @@ class AppState extends EventEmitter {
   /** @type {Question} */
   // @ts-ignore
   question = {}
+
+  /**@type {Number} */
+  score = 0
 }
 
 export const ProxyState = new Proxy(new AppState(), {
