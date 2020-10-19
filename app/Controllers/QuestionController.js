@@ -9,17 +9,20 @@ function _drawCard() {
   document.getElementById("question").innerHTML = card.Cover
 }
 
-// function _flipOver() {
-//   let question = ProxyState.question
-//   let template = ""
-//   document.getElementById("question").innerHTML = question.Template
-// }
 
 //Public
 export default class QuestionController {
   constructor() {
     ProxyState.on("question", _drawCard);
     _drawCard()
+  }
+
+  previous() {
+    questionService.previous()
+  }
+
+  next() {
+    questionService.next()
   }
 
   flipOver() {
@@ -38,6 +41,10 @@ export default class QuestionController {
     let question = ProxyState.question
     let template = ""
     document.getElementById("question").innerHTML = question.Reveal
+  }
+
+  scoreCount() {
+    questionService.scoreCount()
   }
 
 }

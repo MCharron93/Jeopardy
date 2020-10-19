@@ -7,6 +7,9 @@ class AppState extends EventEmitter {
   // @ts-ignore
   question = {}
 
+  next = ""
+  previous = ""
+
   /**@type {Number} */
   score = 0
 }

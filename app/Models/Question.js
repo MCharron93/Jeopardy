@@ -1,3 +1,5 @@
+import { ProxyState } from "../AppState.js"
+
 export default class Question {
     constructor(data) {
         this.value = data.value
@@ -40,6 +42,7 @@ export default class Question {
         return /*html*/`
             <div class="col-4 card p-4 text-center">
                 <h4>${this.answer}</h4>
+                <h6>Score: ${ProxyState.score}</h6>
         </div >
             `
     }
